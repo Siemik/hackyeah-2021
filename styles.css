@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #5186d7;
+    background: #337bd1;
+    background: radial-gradient(circle, hsl(213deg 57% 56%) 12%, rgb(8, 84, 177) 72%);
+    font-family: 'Nunito Sans', sans-serif;
+}
+.cloud-layer-1 {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+	background-repeat: repeat-y;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-clouds2.3.png);
+    background-size: cover;
+}
+.cloud-layer-2 {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+	background-repeat: repeat-y;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg-clouds1.7.png);
+    background-size: cover;
+}
+.balloon-container{
+    width: 208.5px;
+    height: 218.5px;
+    position: relative;
+}
+#balloon {
+    width: 208.5px;
+    height: 218.5px;
+    filter: grayscale(0.6);
+}
+#fire {
+    position: absolute;
+    width: 40.5px;
+    height: 54.5px;
+    top: 145px;
+    right: 84px;
+}
+#balloon_part {
+    position: absolute;
+    width: 88px;
+    height: 39px;
+    top: 168px;
+    right: 60px;
+}
+
+.balloon-container {
+    animation: balloonMove 6s infinite;
+}
+  
+@keyframes balloonMove {
+    0%, 100% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 10px;
+    }
+}
+
+.cloud-layer-2 {
+    animation: skyMove 1000s infinite;
+}
+
+
+@keyframes skyMove {
+    0%, 100% {
+        background-position-x: 0;
+    }
+    50% {
+        background-position-x: 1000px;
+    }
+}
+
+.cloud-layer-1 {
+    animation: skyMove1 1000s infinite;
+}
+
+@keyframes skyMove1 {
+    0%, 100% {
+        background-position-x: 0;
+    }
+    50% {
+        background-position-x: -1000px;
+    }
+}
+
+main {
+      display: none;
+}
+
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0854b1;
+    background-color: #4e88ce;
+    color: white;
+    z-index: 10;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.reminder{
+    position: absolute;
+    top: 200px;
+    opacity: 0;
+    padding-bottom: 40px;
+    color: white;
+    text-align: center;
+    text-shadow: #0854b1 1px 0 10px;
+}
+
+.sub-text {
+    color: rgb(206, 206, 206);
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+}
