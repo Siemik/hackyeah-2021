@@ -118,7 +118,7 @@ main {
 
 .reminder{
     position: absolute;
-    top: 200px;
+    bottom: 200px;
     opacity: 0;
     padding-bottom: 40px;
     color: white;
